@@ -1,0 +1,36 @@
+[package]
+name        = "quasar-minter"
+authors     = ["Tasio Victoria <tasiovictoria@ujulabs.com>"]
+description = "Demo minter built for Quasar Finance"
+version       = "0.0.0"
+edition    = "2021"
+rust-version  = { workspace = true }
+
+[lib]
+crate-type = ["cdylib", "rlib"]
+
+[features]
+# for more explicit tests, cargo test --features=backtraces
+backtraces = ["cosmwasm-std/backtraces"]
+# use library feature to disable all instantiate/execute/query exports
+library = []
+
+[dependencies]
+base-factory        = { version = "2.1.0" }
+cosmwasm-schema     = "1.2.1"
+cosmwasm-std        = "1.2.1"
+cw2                 = "0.16.0"
+cw721               = "0.16.0"
+cw721-base      = { version = "0.16.0", features = ["library"] }
+cw-storage-plus     = "0.16.0"
+cw-utils            = "0.16.0"
+schemars            = "0.8.11"
+serde               = { version = "1.0.145", default-features = false, features = ["derive"] }
+sg1                 = { version = "2.1.0" }
+sg2                 = { version = "2.1.0"}
+sg4                 = { version = "2.1.0" }
+sg721               = { version = "2.1.0" }
+sg721-base      = { version = "2.1.0", features = ["library"] }
+sg-std          = { version = "2.1.0" }
+thiserror           = "1.0.31"
+url                 = "2.2.2"

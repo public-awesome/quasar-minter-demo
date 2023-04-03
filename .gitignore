@@ -17,6 +17,7 @@ testdata/
 # editors
 .idea/
 .vscode/
+*.code-workspace
 
 # macos
 .DS_Store
